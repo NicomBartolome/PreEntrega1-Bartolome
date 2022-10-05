@@ -1,6 +1,7 @@
 import './Navbar.css';
 import logo from './img/logo.png';
 import CartWidget from '../CartWidget/CartWidget';
+import { Link } from 'react-router-dom';
 
 const Navbar = () =>{
     return (
@@ -12,10 +13,10 @@ const Navbar = () =>{
                 <div class="menu">
                     <h1>Tienda Online - RDC Internet y TV</h1>
                     <div class="menuBotones">
-                        <button>Pendrives</button>
-                        <button>Perifericos</button>
-                        <button>Accesorios para WiFi</button>
-                        <button>Conectividad</button>
+                        <Link to={'/category/Routers'}>Routers</Link>
+                        <Link to={'/category/Repetidores'}>Repetidores</Link>
+                        <Link to={'/category/Camaras'}>Camaras</Link>
+                        <Link to={'/category/Adaptadores'}>Adaptadores</Link>
                     </div>
                 </div>
                 <div class="Cart">
