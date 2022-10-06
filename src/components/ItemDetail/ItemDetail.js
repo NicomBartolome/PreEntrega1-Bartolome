@@ -5,7 +5,9 @@ import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = () =>{
 
-
+const onAdd = () => {
+    console.log('Agregar al carrito')
+}
 
 const [pr, SetProduct] = useState({})
     const { productID }  = useParams()
@@ -26,7 +28,7 @@ const [pr, SetProduct] = useState({})
             <br></br>
             <h3>Descripcion del producto</h3>
             <h4>{pr.description}</h4>
-            <ItemCount initial='0' stock='50' />
+            <ItemCount initial='0' stock='50' onAdd={onAdd}/>
         </div>
     )
 }
